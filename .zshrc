@@ -47,7 +47,7 @@ DEFAULT_USER="edc"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx autojump ruby sublime brew extract)
+plugins=(git osx autojump ruby sublime brew extract history sudo atom dirhistory)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,7 +98,8 @@ alias graphite-web='python /opt/graphite/bin/run-graphite-devel-server.py /opt/g
 #alias -s zip='unzip'
 #alias -s bz2='tar -xjvf'
 
-[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+# source autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 export ANDROID_HOME=/opt/android-sdk-mac_x86
 
