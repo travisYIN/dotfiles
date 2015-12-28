@@ -83,7 +83,7 @@ set -g @tpm_plugins '              \
 # Plugins Options
 ############
 # tmux-resurrect options
-set -g @resurrect-processes 'node ssh psql mysql sqlite3 "mongod->mongod --dbpath ~/Dev/srv/mongodb" "grunt->grunt serve"'
+set -g @resurrect-processes 'gulp compass python node ssh psql mysql sqlite3 "mongod->mongod --dbpath ~/Dev/srv/mongodb" "grunt->grunt serve"'
 
 
 # Initializes TMUX plugin manager.
