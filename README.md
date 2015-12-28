@@ -1,7 +1,7 @@
 Dotfiles
+---
 This is my collection of zsh / tmux / .. configurations.
 
----
 
 ## Setup
 ```bash
