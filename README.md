@@ -8,7 +8,7 @@ This is my collection of zsh / tmux / .. configurations.
 # Install required CLI tools
 xcode-select --install
 
-# Clone this repo and initial everything
+# Clone this repo and initialize everything
 # Better checkout install.sh and customize it before start
 git clone https://github.com/chuyik/dotfiles.git ~/dotfiles
 ./dotfiles/install.sh
