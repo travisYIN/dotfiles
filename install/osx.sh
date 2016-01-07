@@ -3,16 +3,16 @@
 # echo "Finder: show all filename extensions"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# echo "show hidden files by default"
+# echo "Show hidden files by default"
 defaults write com.apple.Finder AppleShowAllFiles -bool false
 
-# echo "only use UTF-8 in Terminal.app"
+# echo "Only use UTF-8 in Terminal.app"
 defaults write com.apple.terminal StringEncodings -array 4
 
-# echo "expand save dialog by default"
+# echo "Expand save dialog by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
-# echo "show the ~/Library folder in Finder"
+# echo "Show the ~/Library folder in Finder"
 chflags nohidden ~/Library
 
 echo "Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)"
@@ -39,6 +39,23 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 echo "Enable Safari’s debug menu"
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
+echo "Disable auto correction"
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+echo "Disable smart quotes"
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+echo "Disable smart dashes"
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+# echo "For TextEdit"
+defaults write com.apple.TextEdit SmartQuotes -bool false
+defaults write com.apple.TextEdit SmartDashes -bool false
+
+# echo "For Notes"
+defaults write com.apple.Notes SmartQuotes -bool false
+defaults write com.apple.Notes SmartDashes -bool false
+
 echo "Kill affected applications"
 
-for app in Safari Finder SystemUIServer; do killall "$app" >/dev/null 2>&1; done
+for app in Safari Finder TextEdit Notes SystemUIServer; do killall "$app" >/dev/null 2>&1; done
