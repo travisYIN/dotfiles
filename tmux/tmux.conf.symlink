@@ -77,12 +77,14 @@ set -g @tpm_plugins '              \
   tmux-plugins/tmux-copycat        \
   tmux-plugins/tmux-yank           \
   tmux-plugins/tmux-sidebar        \
+  tmux-plugins/tmux-open           \
 '
 
 ############
 # Plugins Options
 ############
 # tmux-resurrect options
+set -g @resurrect-capture-pane-contents 'on'
 set -g @resurrect-processes 'gulp compass python node ssh psql mysql sqlite3 "mongod->mongod --dbpath ~/Dev/srv/mongodb" "grunt->grunt serve"'
 
 
