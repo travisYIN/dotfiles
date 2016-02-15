@@ -33,8 +33,8 @@ if [ "$(uname)" == "Darwin" ]; then
 fi
 
 ## Changing to zsh
-echo -e "\nConfiguring zsh as default shell"
-chsh -s $(which zsh)
+#echo -e "\nConfiguring zsh as default shell"
+#chsh -s $(which zsh)
 
 echo -e "\nDone."
 exit 0
