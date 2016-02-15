@@ -1,3 +1,5 @@
+export CLICOLOR=1
+
 COLOR_BLACK="\e[0;30m"
 COLOR_BLUE="\e[0;34m"
 COLOR_GREEN="\e[0;32m"
