@@ -36,8 +36,5 @@ fi
 echo -e "\nConfiguring zsh as default shell"
 chsh -s $(which zsh)
 
-## Reload Settings
-source ~/.zshrc
-
 echo -e "\nDone."
 exit 0
