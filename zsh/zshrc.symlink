@@ -18,4 +18,10 @@ export PATH="/usr/local/sbin:$PATH"
 # adding path directory for custom scripts
 export PATH="$DOTFILES/bin:$PATH"
 
+# faster electron downloads
+export ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/
+
 source ~/.bash_profile
+
+export NVM_DIR="/Users/edc/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
