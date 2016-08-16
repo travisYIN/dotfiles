@@ -17,7 +17,7 @@
 [mergetool]
 	prompt = false
 [merge]
-	tool = Kaleidoscope
+	tool = code
 [credential]
 	helper = osxkeychain
 [filter "lfs"]
