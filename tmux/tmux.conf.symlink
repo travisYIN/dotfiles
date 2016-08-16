@@ -21,10 +21,8 @@ set -g visual-activity off
 set -g renumber-windows on
 set-option -g allow-rename off
 
-set-option -g mode-mouse on
-set-option -g mouse-resize-pane on
-set-option -g mouse-select-pane on
-set-option -g mouse-select-window on
+set-option -g mouse on
+bind-key -T root WheelUpPane select-pane -t =\; copy-mode -e\; send-keys -M
 
 set-option -g set-titles on
 set-option -g set-titles-string "#T - #W"
@@ -59,7 +57,6 @@ bind r source-file ~/.tmux.conf \; display "Reloaded!"
 
 set -g status off
 set -g status on
-set -g status-utf8 on
 set -g status-interval 30
 
 set -g status-position bottom
