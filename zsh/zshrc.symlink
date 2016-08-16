@@ -15,6 +15,10 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
+# Golang
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin
+
 # adding path directory for custom scripts
 export PATH="$DOTFILES/bin:$PATH"
 
