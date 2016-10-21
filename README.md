@@ -2,7 +2,7 @@ Dotfiles
 ---
 This is my collection of zsh / tmux / osx / brew / git / ... configurations.
 
-<img src="http://chuyik-github-io.qiniudn.com/others/dotfiles.jpeg?_2" >
+![dotfiles](https://cloud.githubusercontent.com/assets/6262943/19597521/ba234cca-97c7-11e6-9f9f-473f103e1f6f.jpeg)
 
 ## Setup
 ```bash
