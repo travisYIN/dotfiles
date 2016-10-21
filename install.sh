@@ -2,12 +2,19 @@
 
 echo "---------------------------------------------------------"
 
+DOTFILES=$HOME/dotfiles
+
 ## Install Submodules
 echo -e "\nInitializing submodule(s)"
 git submodule update --init --recursive
 
 ## Create Symlinks
-source install/link.sh
+source $DOTFILES/install/link.sh
+
+## Create ~/.bash_profile if not found
+if [ ! -e "$HOME/.bash_profile" ]; then
+    touch $HOME/.bash_profile
+fi
 
 ## Install or Configure OSX
 if [ "$(uname)" == "Darwin" ]; then
@@ -23,18 +30,19 @@ if [ "$(uname)" == "Darwin" ]; then
     if [ ! -d $ZSH_CUSTOM/themes ]; then
         mkdir -p $ZSH_CUSTOM/themes/
         ln -s $DOTFILES/oh-my-zsh/themes/bullet-train.zsh-theme $ZSH_CUSTOM/themes/bullet-train.zsh-theme
+        ln -s $DOTFILES/oh-my-zsh/themes/bullet-train.zsh-theme $HOME/.oh-my-zsh/themes/bullet-train.zsh-theme
     fi
 
     echo -e "\nBrewing all the things"
-    source install/brew.sh
+    source $DOTFILES/install/brew.sh
 
     echo -e "\nUpdating OSX settings"
-    source install/osx.sh
+    source $DOTFILES/install/osx.sh
 fi
 
 ## Changing to zsh
-#echo -e "\nConfiguring zsh as default shell"
-#chsh -s $(which zsh)
+echo -e "\nConfiguring zsh as default shell"
+chsh -s $(which zsh)
 
 echo -e "\nDone."
 exit 0

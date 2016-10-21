@@ -17,8 +17,9 @@ brew install nginx
 
 # development tools
 brew install git
-# brew install macvim --with-override-system-vim
+brew install autojump
 brew install reattach-to-user-namespace
 brew install tmux
 brew install zsh
 brew install highlight
+# brew install macvim --with-override-system-vim
