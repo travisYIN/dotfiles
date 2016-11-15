@@ -21,6 +21,7 @@ export PATH=$PATH:$GOPATH/bin
 
 # adding path directory for custom scripts
 export PATH="$DOTFILES/bin:$PATH"
+export PATH="$PATH:$HOME/.yarn/bin" # yarn
 
 # faster electron downloads
 export ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/
