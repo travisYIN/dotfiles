@@ -10,7 +10,6 @@ for config ($ZSH/**/*.zsh) source $config
 export LANG=en_US.UTF-8
 export EDITOR='subl'
 
-export ANDROID_HOME=/opt/android-sdk-mac_x86
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
@@ -30,3 +29,5 @@ source ~/.bash_profile
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+nvm_auto_switch

@@ -29,9 +29,13 @@ if [ "$(uname)" == "Darwin" ]; then
     ### Oh My Zsh
     if [ ! -d $ZSH_CUSTOM/themes ]; then
         mkdir -p $ZSH_CUSTOM/themes/
-        ln -s $DOTFILES/oh-my-zsh/themes/bullet-train.zsh-theme $ZSH_CUSTOM/themes/bullet-train.zsh-theme
-        ln -s $DOTFILES/oh-my-zsh/themes/bullet-train.zsh-theme $HOME/.oh-my-zsh/themes/bullet-train.zsh-theme
     fi
+    ln -s $DOTFILES/oh-my-zsh/themes/bullet-train.zsh-theme $ZSH_CUSTOM/themes/bullet-train.zsh-theme
+    ln -s $DOTFILES/oh-my-zsh/themes/bullet-train.zsh-theme $HOME/.oh-my-zsh/themes/bullet-train.zsh-theme
+    if [ ! -d $ZSH_CUSTOM/plugins ]; then
+        mkdir -p $ZSH_CUSTOM/plugins/
+    fi
+    git clone https://github.com/dijitalmunky/nvm-auto.git $ZSH_CUSTOM/plugins/nvm-auto
 
     echo -e "\nBrewing all the things"
     source $DOTFILES/install/brew.sh
@@ -45,4 +49,5 @@ echo -e "\nConfiguring zsh as default shell"
 chsh -s $(which zsh)
 
 echo -e "\nDone."
+echo -e "You should reload oh-my-zsh with command: \n\tsource ~/.zshrc"
 exit 0
