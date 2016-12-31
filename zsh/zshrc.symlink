@@ -26,6 +26,9 @@ export PATH="$PATH:$HOME/.yarn/bin" # yarn
 # faster electron downloads
 export ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/
 
+# fastlane
+export PATH="$HOME/.fastlane/bin:$PATH"
+
 source ~/.bash_profile
 
 export NVM_DIR="$HOME/.nvm"
