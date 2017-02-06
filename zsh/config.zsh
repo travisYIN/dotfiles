@@ -9,7 +9,7 @@ export BULLETTRAIN_NVM_SHOW=true
 # Plugins
 
 # config for zsh-nvm
-export NVM_LAZY_LOAD=true
+# export NVM_LAZY_LOAD=true
 export NVM_AUTO_USE=true
 
 plugins=(zsh-nvm git autojump sublime history dirhistory zsh-better-npm-completion)
