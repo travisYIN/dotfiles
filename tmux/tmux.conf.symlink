@@ -1,5 +1,4 @@
 # .tmux.conf
-# Edward Chu <crazyzyt@gmail.com>
 
 set -g default-command "reattach-to-user-namespace -l zsh"
 set -g default-terminal "screen-256color"
@@ -27,6 +26,9 @@ bind-key -T root WheelUpPane select-pane -t =\; copy-mode -e\; send-keys -M
 set-option -g set-titles on
 set-option -g set-titles-string "#T - #W"
 
+# fixed alt + left/right
+set-window-option -g xterm-keys on
+
 # synchronize all panes in a window
 bind Y setw synchronize-panes
 
@@ -34,8 +36,8 @@ bind Y setw synchronize-panes
 # key bindings
 ############
 unbind C-b
-set -g prefix C-q
-bind C-q send-prefix
+set -g prefix C-a
+bind C-a send-prefix
 
 unbind %
 bind h split-window -h # Split panes horizontal
@@ -139,7 +141,7 @@ set-option -g display-panes-colour $tm_color_inactive
 set-window-option -g clock-mode-colour $tm_color_active
 
 tm_date="#[fg=$tm_color_inactive] %a %m/%d %H:%M"
-tm_host="#[fg=$tm_color_feature,bold]chuyik"
+tm_host="#[fg=$tm_color_feature,bold]cjj"
 tm_session_name="#[fg=$tm_color_feature,bold]$tm_icon #S"
 
 set -g status-left $tm_session_name' '

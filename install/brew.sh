@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if test ! $(which brew); then
-    echo "Installing homebrew"
+    echo "Installing homebrew..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
@@ -16,10 +16,11 @@ brew install wget
 brew install nginx
 
 # development tools
-brew install git
-brew install autojump
-brew install reattach-to-user-namespace
-brew install tmux
 brew install zsh
-brew install highlight
-# brew install macvim --with-override-system-vim
+brew install zsh-completions
+brew install git
+brew install git-lfs
+brew install autojump
+brew install tmux
+brew install reattach-to-user-namespace
+# brew install antigen

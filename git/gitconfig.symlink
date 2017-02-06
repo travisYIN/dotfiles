@@ -1,33 +1,17 @@
 [user]
-	name = Edward Chu
-	email = crazyzyt@gmail.com
-[filter "media"]
-	clean = git media clean %f
-	smudge = git media smudge %f
+	name = chenjiajian
+	email = 798095202@qq.com
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 	required = true
-[gc]
-	auto = 256
+	clean = git-lfs clean -- %f
 [alias]
 	ls = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit --date=relative --name-status
 	lt = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit --date=relative
-
-[diff]
-    tool = default-difftool
-[difftool "default-difftool"]
-    cmd = code --wait --diff $LOCAL $REMOTE
-[mergetool]
-	prompt = false
-[merge]
-	tool = code
 [credential]
 	helper = osxkeychain
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
 [color]
-	status = always
-[push]
-	default = upstream
+	ui = true
 [pull]
 	rebase = true

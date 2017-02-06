@@ -1,36 +1,18 @@
 export DOTFILES=$HOME/dotfiles
-ZSH=$DOTFILES/zsh
 
-DEFAULT_USER=$USER
+source $DOTFILES/zsh/config.zsh
 
-for config ($ZSH/**/*.zsh) source $config
-
-[ -z "$TMUX" ] && export TERM=xterm-256color
-
-export LANG=en_US.UTF-8
-export EDITOR='subl'
-
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-
-# Golang
-export GOPATH=$HOME/.go
-export PATH=$PATH:$GOPATH/bin
+# alias
+source $DOTFILES/zsh/alias.zsh
 
 # adding path directory for custom scripts
 export PATH="$DOTFILES/bin:$PATH"
-export PATH="$PATH:$HOME/.yarn/bin" # yarn
 
 # faster electron downloads
 export ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/
 
-# fastlane
-export PATH="$HOME/.fastlane/bin:$PATH"
-
 source ~/.bash_profile
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-nvm_auto_switch
+# setup nvm
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
