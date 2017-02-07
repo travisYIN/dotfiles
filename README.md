@@ -33,6 +33,7 @@ git clone git@github.com:Chen-jj/dotfiles.git ~/dotfiles
 * autojump
 * tmux
 * reattach-to-user-namespace
+* ccat
 
 ## OSX Configuration
 

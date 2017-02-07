@@ -1,4 +1,6 @@
 alias cls="clear"
+alias cat="ccat"
+
 alias ofd="open ."
 alias zshrl="source ~/.zshrc"
 alias zshrc="st ~/.zshrc"
