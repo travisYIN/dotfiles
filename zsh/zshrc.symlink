@@ -14,5 +14,54 @@ export ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/
 source ~/.bash_profile
 
 # setup nvm
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# where proxy
+proxy () {
+  export HTTP_PROXY='http://web-proxy.tencent.com:8080'
+  export HTTPS_PROXY='http://web-proxy.tencent.com:8080'
+  export NO_PROXY="localhost,127.0.0.1,.oa.com"
+  export http_proxy=$HTTP_PROXY
+  export https_proxy=$HTTPS_PROXY
+  export no_proxy=$NO_PROXY
+  export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.cloud.tencent.com/homebrew-bottles
+  echo "HTTP Proxy on"
+}
+
+# where homeproxy
+homeproxy () {
+  export HTTP_PROXY='http://127.0.0.1:12639'
+  export HTTPS_PROXY='http://127.0.0.1:12639'
+  export http_proxy=$HTTP_PROXY
+  export https_proxy=$HTTPS_PROXY
+  export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.cloud.tencent.com/homebrew-bottles
+  unset NO_PROXY
+  unset no_proxy
+  echo "HTTP Home Proxy on"
+}
+
+# where noproxy
+noproxy () {
+  unset HTTP_PROXY
+  unset HTTPS_PROXY
+  unset NO_PROXY
+  unset http_proxy
+  unset https_proxy
+  unset no_proxy
+  export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+  echo "HTTP Proxy off"
+}
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT="/Users/admin/Downloads/cocos2d-x-4.0/tools/cocos2d-console/bin"
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+# Add environment variable COCOS_X_ROOT for cocos2d-x
+export COCOS_X_ROOT="/Users/admin/Downloads"
+export PATH=$COCOS_X_ROOT:$PATH
+
+# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
+export COCOS_TEMPLATES_ROOT="/Users/admin/Downloads/cocos2d-x-4.0/templates"
+export PATH=$COCOS_TEMPLATES_ROOT:$PATH
